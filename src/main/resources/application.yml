@@ -1,0 +1,27 @@
+server:
+  port: 8989
+  context-path: /springboot
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: hr
+    password: system
+    driver-class-name: oracle.jdbc.OracleDriver
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  jackson:
+    date-format: yyyy/MM/dd
+    time-zone: GMT+8
+#  spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+#  spring.jackson.time-zone=GMT+8
+
+mybatis:
+  type-aliases-package: com.baizhi.entity
+
+
